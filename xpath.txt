@@ -1,0 +1,187 @@
+
+    framework
+----------------
+
+data provider
+
+TestCases
+
+
+
+configuration property file where mention the path of browser driver and we define timeout or so many other parameter which can be change in 
+further in futur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xpath:
+------
+
+there 2 type of xpath absolute and relative
+
+
+
+Absolute:
+---------
+1. To find the abosulte xpath we can use inspect element.
+2. To get absoulte xpath we stat from html tag.
+
+
+
+
+
+
+A single slash at the start of Xpath instructs XPath engine to look for element starting from root node.
+
+A double slash at the start of Xpath instructs XPath engine to search look for matching element anywhere in the XML document.
+
+
+Technique 3 | Relative XPath | Combination of Double Slash: Relative xpath can be choose in many ways and to understand that, it is required to understand the usage of single & double slashes in the xpaths.
+
+Usage of Single ‘/’ and double ‘//’ in the xpath
+A single slash ‘/’ anywhere in Xpath signifies to look for the element immediately inside its parent element.
+
+A double slash ‘//’ signifies to look for any child or any grand-child element inside the parent element.
+
+Finding it confusing, just look at the xpath of the same RSS button with using double slashes in the middle of the xpath:
+
+Absolute xpath: /html/body/div[2]/div/div/footer/section[3]/div/ul/li[3]/a
+
+FirePath xpath: //*[@id=’social-media’]/ul/li[3]/a
+
+New relative xpath: //body//footer/section[3]/div/ul/li[3]/a
+
+Another relative xpath: //body//section[3]/div/ul/li[3]/a
+
+I would suggest you to try it yourself, so that you can understand it more efficiently.
+
+ 
+
+ Technique 4 | Partial XPath | Contains Keyword : Most of the times tester face issues when the locator’s properties are dynamically generating. Let’s take the example of my profile image on this same page at the right side of the screen and assume that the ‘src’ of the image  is dynamically generating. The html code of the div looks like this:
+
+
+
+Partial xpath --> Using  contains
+
+<div class="profile_cont" itemtype="http://schema.org/Article" itemscope="">
+ 
+<img src="http://toolsqa.com/wp-content/uploads/2014/02/Profile.jpg?51a507" itemprop="image">
+ 
+</div>
+
+
+
+//img[contains(@ src,'profile')]
+
+
+
+Technique 5 | Partial XPath | Starts-With Keyword :
+
+
+<img alt="Visit Us On Linkedin" style="border:0px;" src="http://www.toolsqa.com/wp-content/uploads/2014/04/linkedin.png">
+
+
+
+ //img[starts-with(@alt,’Visit Us On Linkedin’)]
+
+
+
+Technique 6 | Partial XPath | Text Keyword :
+
+
+
+suppose text is given then
+
+
+.//*[text()='view my complete profile']
+
+
+or .//a[contains(tex(),'view my complete profile']
+
+
+LSTBOK97814736052061HHNV0
+
+
+.//input[start-with()]
+
+.//input[contains(@ data-buy-listing-id,'LSTBOK97814736052061HHNV0')]
+
+
+
+
+btn-express-checkout btn-big current
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Or10372
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
