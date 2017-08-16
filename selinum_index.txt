@@ -1,0 +1,534 @@
+
+
+
+
+OOP’s concept – Class, Objects Polymorphism, Inheritance and Encapsulation
+
+Java Programming essentials- Object Instances, method overloading/overriding concepts and packages
+
+Control Statements – While, do-While, Switch, If statements – This will help us in writing the scripts for a multiple scenario statements and decision making scenarios.
+
+Looping statements – This will help us in scenarios like, iterating through a large table to find a record that you want and Running the same test for multiple number of times.
+
+Arrays Concepts – This will help us in having some set of datas of same type in a static way.
+
+Threads and MultiThreading Concepts – This will help us in making run our scripts in different threads that will help us in achieving better performance.
+
+Java Collections Framework – ArrayLists and HashMaps – This will help us in maitaining a collection of data’s. Particularly useful for scenarios where you need to compare the data from Web app UI with the DB. [OR] From UI to another UI
+
+File Streams – This will be helpful in externalization of data through CSV, Excel or Java Properties file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+Course Title : Selenium 
+Version         : Latest
+Course Fee   : INR 10000 or $ 250 or £ 150 or EUR 200 
+Contact us for any queries : Training@qa-masters.com
+
+                                       	 Selenium Course Contents
+
+
+1. Automation Testing overview 
+Why
+What
+How
+Automation Testing in breif
+Automation tools available
+Why Selenium
+
+
+2. Introduction to Selenium 
+History
+Different packages
+Capabilities
+Limitations
+Scope of automation using Selenium
+
+3. Selenium IDE 
+Introduction
+Installation
+Integrated Development Environment – Capabilities
+IDE Menu's, Toolbars, Options
+Recording
+Playback
+Creating Test Suite
+Sample Examples
+Assignments
+
+4. Test Scripts on IDE 
+Converting into various formats
+Compatibility with different Languages.
+Commonly used selenese commands
+Assignments
+
+5. Locators
+
+Need for locating an element on the webpage
+Tools used for locating elements
+Installation of the tools ( FireBug & FirePath)
+Explanation how to locate using these tools
+Writing a custom XPATH
+Assignments
+
+6. Writing a test script on IDE without recording
+Storing values into Variables
+Usage of Java script command
+Usage of Regular expressions
+Taking a screenshot when a test case fails
+Assignments
+
+7. Debugging, Break Points & Check points on IDE 
+
+8. Limitations of IDE
+9. Selenium Remote Control (RC)
+Advantages over IDE
+Capabilities of RC
+Architecture of RC
+
+10. Eclipse Basics
+
+11. Configuration of RC with Eclipse
+
+12. Java Basics ViewDetails || CloseDetails
+Java architecture
+OOPs concepts
+Class and Object
+Variables
+Data Types
+Conditional Statements
+Loops
+Arrays
+Strings
+Usage of Functions
+Exception Handling
+File Reading
+File Writing
+Reading & Writing of Text Files
+Assignments
+
+13. JUnit Framework 
+Annotations
+Results
+
+14. Test NG Framework 
+Installation
+Annotations
+Report Files
+TestNg.xml
+Difference between TestNg & JUnit
+
+15. Sample RC Program
+
+16. Record on IDE & Run using RC
+
+17. Writing Test cases compatible for RC
+
+18. Parameterizing test cases
+
+19. IDE vs Remote Control
+
+20. Limitations of RC
+
+21. WebDriver – Introduction 
+WebDriver Architecture
+RC Vs WebDriver
+Commonly used commands on WebDriver
+Test case automation using WebDriver
+Limitations of WebDriver
+Assignments
+
+22. Programming with WebDriver 
+DIffernt browser driver
+Handling web elements like (Links, Buttons, Input Box, Check Boxes..)
+Handling List Box
+Close & Quit commands
+Navigate & Get commands
+Simulating Front Back buttons in browser
+Assignments
+
+23. Firefox Profiling 
+Need for Profiling
+Usage
+Sample Program
+Assignments
+
+24. Handling cookies
+
+25. Capturing screen shot using WebDriver
+
+26. Key Board Events and Mouse Events
+
+27. Repeating the test case with different data
+
+28. Generating of customized reports using Java
+
+29. Sample Frameworks and Architecture
+
+30. Test Automation Project with Selenium Webdriver
+
+
+
+
+
+
+
+
+
+
+
+
+Selenium Automation Hybrid Framework
+(Data Driven & Modular Driven) Beginner Level
+
+I hope that you have enjoyed the journey of  “Ten steps to setting up the Selenium Automation Framework” so far and you have understood all the topics well. Let’s revise what we have covered and do a Practice Exercise on it.
+
+What we have covered in the previous chapters:
+
+1) Page Object Model
+
+2) Object Repository
+
+3) Modular Driven Technique
+
+4) Function Parameters
+
+5) Constant Variables
+
+6) Data Driven Technique
+
+7) Log4j Logging
+
+8) TestNG Reporting
+
+9) User Defined Functions
+
+10) Exception Handling
+
+It is almost the end of setting up the framework. We have already covered everything and what is remaining is expanding the test to cover End to End scenarios, Prioritizing the Test Cases, Preparing a Test Suite and Grouping of Test Cases.
+
+Before jumping to the next level I would like to do an exercise on what we have learned so far on the Demo Application. What we have covered so far is the Login functionality only. I would like you to automate an end to end flow covering below steps:
+
+1) Login to the demo application Online Store 
+
+2) Selecting a product category from Top Menu
+
+3) Selecting a product and adding it to the cart
+
+4) Go to payment details page and complete the order
+
+5) Verify details from final Confirmation page
+
+ 
+
+Selenium Automation Hybrid Framework 
+--------------------------------------
+
+This framework is at very beginner level and very easy to understand. This implements the Page Object Model Technique, Data Driven Technique, Modular Driven Technique, Log4j Logging, TestNG Reporting & TestNG Reporter Logs.
+
+Please download the code from here Selenium Automation Hybrid Framework
+
+Or please read the code below.
+
+
+
+
+1) Page Object Model
+--------------------
+
+Creating Selenium test cases can result in an unmaintainable project. One of the reasons is that too many duplicated code is used. Duplicated code could be caused by duplicated functionality and this will result in duplicated usage of locators. The disadvantage of duplicated code is that the project is less maintainable. If some locator will change,
+ 
+you have to walk through the whole test code to adjust locators where necessary. By using the page object model we can make non-brittle test code and reduce or eliminate duplicate test code. Beside of that it improves the readability and allows us to create interactive documentation. Last but not least, we can create tests with less keystroke.
+
+ An implementation of the page object model can be achieved by separating the abstraction of the test object and the test scripts.
+
+Note: We will follow the same example which we have used in First Test Case. Let’s assume it our base test case and implement the Page Object Model (POM) in it.
+
+How to do it…
+1. Create a ‘New Package’ file and name it as ‘pageObjects’, by right click on the Project and select New > Package. We will be creating different packages for Page Objects, Utilities, Test Data, Test Cases and Modular actions. It is always recommended to use this structure, as it is easy to understand, easy to use and easy to maintain.
+
+2. Create a ‘New Class’ file and refer the name to the actual page from the test object, by right click on the above created Package and select New > Class. In our case it is Home Page and LogIn Page.
+
+3. Now create a Static Method for each Element (Object) in the Home Page. Each method will have an Argument (driver) and a Return value (element).
+
+
+
+
+
+
+
+Just like Checkboxes & Radio buttons, Dropdown and Multiple Select also works together and almost the same way. To perform any action, the first task is to identify the element group. I am saying it a group, as dropdown/multiple select is not a single element. They always have a single name but and they contains one or more than one elements in them. I should rather say more than one option in dropdown and multiple select. The only difference between these two is deselecting statement & multiple selections are not allowed on dropdowns. Let’s look at the different operations:
+ 
+
+Selecting Dropdown/Multiple Select Box
+It is just an ordinary operation like selecting any other type of element on a webpage. You can choose it by ID, Name, Css & Xpath etc. But to perform any action on this element it is required to import ‘import org.openqa.selenium.support.ui.Select' package and to use it we need to create a new select object of class select.
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+Note: Select class only works for elements with <select> tags
+
+ 
+
+Selecting an option using ‘selectByVisibleText’
+It is very easy to choose or select an option given under any dropdowns and multiple selection boxes with selectByVisibleText method.
+
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+ 
+oSelection.selectByVisibleText(text);
+ 
+
+Selecting an option using ‘selectByIndex’
+It is almost the same as selectByVisibleText but the only difference here is that we provide the index number of the option here rather the option text.
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+ 
+oSelection.selectByIndex(index);
+ 
+
+Selecting an option using ‘selectByValue’
+It is again the same what we have discussed earlier, the only difference in this is that we need to provide the value of the option rather the option text.
+
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+ 
+oSelection.selectByValue(value);
+Note: The value of an option and the text of the option may not be always same and there can be a possibility that the value is not assigned to Select webelement. If the value is given in the Select tag then only you can use the selectByValue method.
+
+ 
+
+Getting the Size of Select item
+Sometimes you may like to count the element in the dropdown and multiple select box, so that you can use the loop on Select element.
+
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+ 
+List<WebElement> oSize = oSelection.getOptions();
+ 
+int iListSize = oSize.size();
+ 
+
+Printing the Options
+Once you get the size of the Select element then it is easy to print the Text of the options.
+
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+ 
+	List oSize = oSelection.getOptions();
+ 
+	int iListSize = oSize.size();
+ 
+	for(int i =0; i>iListSize ; i++){
+ 
+		String sValue = oSelection.getOptions().get(i).getText();
+ 
+		System.out.println(sValue);
+ 
+		}
+All of the above methods work on both Dropdown and Multiple select box.
+
+ 
+
+Deselect methods
+This only works on Multiple selection boxes. If in case you want to deselect any selected option and that can be done with either deselectAll(), deselectByIndex, deselectByValue and deselectByVisibletext.
+
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+ 
+	oSelection.deselectAll();
+ 
+	oSelection.deselectByIndex(index);
+ 
+	oSelection.deselectByValue(value);
+ 
+	oSelection.deselectByVisibleText(text);
+ 
+
+Multiple selection method
+This one also just works on Multiple selection boxes and not on regular List boxes or dropdowns. There is no additional logic behind selecting multiple options of Select element. All you need to do is to fire select commands on multiple elements one by one that’s it.
+
+
+
+Select oSelection = new Select(driver.findElement(By.id(id)));
+ 
+	oSelection.selectByIndex(index)
+ 
+	oSelection.selectByIndex(index)
+ 
+	// Or
+ 
+	oSelection.selectByVisibleText(text)
+ 
+	oSelection.selectByVisibleText(text)
+ 
+	// Or
+ 
+	oSelection.selectByValue(value)
+ 
+	oSelection.selectByValue(value)
+ 
+
+Practice Exercise -1 (Drop Down Box/List)
+1) Launch new Browser
+
+2) Open “http://www.toolsqa.com/automation-practice-form/”
+
+3) Select ‘Continents’ Drop down ( Use Id to identify the element )
+
+4) Select option ‘Europe’ (Use selectByIndex)
+
+5) Select option ‘Africa’ now (Use selectByVisibleText)
+
+6) Print all the options for the selected drop down and select one option of your choice
+
+7) Close the browser
+
+Solution
+
+
+
+package practiceTestCases;
+ 
+import java.util.List;
+ 
+import java.util.concurrent.TimeUnit;
+ 
+import org.openqa.selenium.By;
+ 
+import org.openqa.selenium.WebDriver;
+ 
+import org.openqa.selenium.WebElement;
+ 
+import org.openqa.selenium.firefox.FirefoxDriver;
+ 
+import org.openqa.selenium.support.ui.Select;
+ 
+public class PracticeDropDown {
+ 
+	private static WebDriver driver = null;
+ 
+	public static void main(String[] args) throws InterruptedException {
+ 
+	 // Create a new instance of the Firefox driver
+ 
+        driver = new FirefoxDriver();
+ 
+        // Put an Implicit wait, this means that any search for elements on the page could take the time the implicit wait is set for before throwing exception
+ 
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+ 
+        // Launch the URL
+ 
+        driver.get("http://www.toolsqa.com/automation-practice-form");
+ 
+        // Step 3: Select 'Continents' Drop down ( Use Id to identify the element )
+ 
+        // Find Select element of "Single selection" using ID locator.
+ 
+	    Select oSelection = new Select(driver.findElement(By.id("continents")));
+ 
+	    // Step 4:) Select option 'Europe' (Use selectByIndex)
+ 
+        oSelection.selectByVisibleText("Europe");
+ 
+        // Using sleep command so that changes can be noticed
+ 
+        Thread.sleep(2000);
+ 
+        // Step 5: Select option 'Africa' now (Use selectByVisibleText)
+ 
+        oSelection.selectByIndex(2);
+ 
+        Thread.sleep(2000);
+ 
+        // Step 6: Print all the options for the selected drop down and select one option of your choice
+ 
+        // Get the size of the Select element
+ 
+        List oSize = oSelection.getOptions();
+ 
+	    int iListSize = oSize.size();
+ 
+	    // Setting up the loop to print all the options
+ 
+	    for(int i =0; i < iListSize ; i++){
+ 
+		    // Storing the value of the option	
+ 
+		    String sValue = oSelection.getOptions().get(i).getText();
+ 
+		    // Printing the stored value
+ 
+		    System.out.println(sValue);
+ 
+		    // Putting a check on each option that if any of the option is equal to 'Africa" then select it 
+ 
+		    if(sValue.equals("Africa")){
+ 
+			    oSelection.selectByIndex(i);
+ 
+			    break;
+ 
+			    }
+ 
+	    	}	    
+ 
+	    // Kill the browser
+ 
+	    driver.close();
+ 
+	}
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
